@@ -1,0 +1,23 @@
+[
+  {
+    "id": "ai",
+    "title": "人工智能（AI）",
+    "summary": "面向复杂场景的学习与推理方法。",
+    "icon": "🤖",
+    "detail": "content/research/ai.md"
+  },
+  {
+    "id": "robotics",
+    "title": "机器人（Robotics）",
+    "summary": "感知-决策-控制一体化的智能机器人技术。",
+    "icon": "🦾",
+    "detail": "content/research/robotics.md"
+  },
+  {
+    "id": "data-science",
+    "title": "数据科学（Data Science）",
+    "summary": "数据驱动的建模、分析与可视化。",
+    "icon": "📊",
+    "detail": "content/research/data-science.md"
+  }
+]

@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>XX Academy · XX Lab</title>
+  <meta name="description" content="Official website template for XX Lab">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="branding">
+        <img src="assets/img/icon.png" alt="学院标志" class="college-logo">
+        <a href="#home" class="logo">联合工程学院 · XX实验室</a>
+      </div>
+      <button class="hamburger" aria-label="Toggle navigation">☰</button>
+      <nav class="site-nav" id="site-nav">
+        <a href="#home" data-route="home">首页</a>
+        <a href="#about" data-route="about">实验室简介</a>
+        <a href="#people" data-route="people">团队成员</a>
+        <a href="#research" data-route="research">研究方向</a>
+        <a href="#publications" data-route="publications">科研成果</a>
+        <a href="#news" data-route="news">新闻动态</a>
+        <a href="#join" data-route="join">加入我们</a>
+        <a href="#contact" data-route="contact">联系方式</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Home / Hero -->
+    <section id="home" class="section-page">
+      <div class="hero">
+        <div class="container hero-inner">
+          <div class="hero-text">
+            <h1>推进科学前沿，培养卓越人才</h1>
+            <p>XX实验室致力于人工智能、机器人与数据科学的交叉研究，服务国家重大战略需求与产业发展。</p>
+            <div class="hero-cta">
+              <a class="btn primary" href="#join">加入我们</a>
+              <a class="btn" href="#people">了解团队</a>
+            </div>
+          </div>
+          <div class="hero-media" aria-hidden="true">
+            <img src="assets/img/icon.png" alt="Lab icon" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section-page">
+      <div class="container">
+        <h2>实验室简介</h2>
+        <div id="about-content" class="markdown"></div>
+      </div>
+    </section>
+
+    <!-- People -->
+    <section id="people" class="section-page">
+      <div class="container">
+        <h2>团队成员</h2>
+        <div id="people-content"></div>
+      </div>
+    </section>
+
+    <!-- Research -->
+    <section id="research" class="section-page">
+      <div class="container">
+        <h2>研究方向</h2>
+        <div id="research-content" class="card-grid"></div>
+      </div>
+    </section>
+
+    <!-- Publications -->
+    <section id="publications" class="section-page">
+      <div class="container">
+        <h2>科研成果</h2>
+        <div id="publications-content"></div>
+      </div>
+    </section>
+
+    <!-- News -->
+    <section id="news" class="section-page">
+      <div class="container">
+        <h2>新闻动态</h2>
+        <div id="news-content"></div>
+      </div>
+    </section>
+
+    <!-- Join -->
+    <section id="join" class="section-page">
+      <div class="container">
+        <h2>加入我们</h2>
+        <div id="join-content" class="markdown"></div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section-page">
+      <div class="container">
+        <h2>联系方式</h2>
+        <div id="contact-content" class="markdown"></div>
+        <div id="map" style="height:320px; border:1px solid #e5e5e5; border-radius:8px; margin-top:16px;">
+          <div style="padding:12px; color:#666;">此处可嵌入地图（高德/百度），模板暂留占位。</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>XX学院 · XX实验室</strong>
+        <p>Copyright © <span id="copyright-year"></span> XX实验室</p>
+      </div>
+      <div class="footer-contact">
+        <p>地址：北部湾大学联合工程学院207楼实验室</p>
+        <p>邮箱：lab@xx.edu</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Markdown parser -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

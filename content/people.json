@@ -1,0 +1,24 @@
+{
+  "pi": [
+    {
+      "name": "YuanGou Lei",
+      "title": "Professor, PI",
+      "email": "pi@xx.edu",
+      "office": "Room 501",
+      "photo": "assets/img/avatar.svg",
+      "bio": "研究方向包括人工智能和数据科学，长期关注智能系统的可解释性与可靠性。",
+      "scholar": "#"
+    }
+  ],
+  "researchers": [
+    { "name": "YuanGou Lei", "title": "Postdoc", "email": "", "startYear": 2024, "area": "Machine Learning", "photo": "assets/img/avatar.svg" }
+  ],
+  "students": [
+    { "name": "YuanGou Lei", "degree": "PhD", "startYear": 2023, "area": "Robotics", "photo": "assets/img/avatar.svg" },
+    { "name": "YuanGou Lei", "degree": "Master", "startYear": 2024, "area": "Data Science", "photo": "assets/img/avatar.svg" }
+  ],
+  "alumni": [
+    { "name": "YuanGou Lei", "year": 2022, "destination": "XX University (PhD)" },
+    { "name": "YuanGou Lei", "year": 2021, "destination": "ABC Corp (Engineer)" }
+  ]
+}
