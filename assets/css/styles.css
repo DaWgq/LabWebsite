@@ -80,6 +80,13 @@ img { max-width: 100%; display: block; }
 .markdown ul { padding-left: 20px; }
 .markdown li { margin: 4px 0; }
 
+/* About section */
+.about-intro { background: #fff; border: 1px solid var(--border); border-radius: 8px; padding: 32px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+.about-intro h3 { color: var(--primary); font-size: 22px; margin: 0 0 16px; border-bottom: 2px solid var(--accent); padding-bottom: 12px; }
+.about-intro h3:not(:first-child) { margin-top: 32px; }
+.about-desc-cn, .about-desc-en { font-size: 16px; line-height: 1.8; color: var(--text); text-align: justify; margin: 0; }
+.about-desc-en { color: var(--muted); font-style: italic; }
+
 /* People */
 .people-section { margin: 28px 0; }
 .people-section h3 { color: var(--primary); font-size: 20px; margin-bottom: 16px; }
