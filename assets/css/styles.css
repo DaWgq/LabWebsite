@@ -32,7 +32,7 @@ img { max-width: 100%; display: block; }
 .header-inner { display: flex; align-items: center; gap: 16px; padding: 12px 0; }
 .branding { display: flex; align-items: center; gap: 12px; }
 .college-logo { height: 45px; width: 45px; display: block; }
-.logo { text-decoration: none; color: #ffffff; font-weight: 700; font-size: 18px; }
+.logo { text-decoration: none; color: #ffffff; font-weight: 700; font-size: 17px; }
 .site-nav { display: flex; flex-wrap: wrap; gap: 8px; }
 .site-nav a { padding: 8px 14px; border-radius: 4px; text-decoration: none; color: #ffffff; transition: all 0.3s ease; }
 .site-nav a:hover { background: var(--primary-dark); }
