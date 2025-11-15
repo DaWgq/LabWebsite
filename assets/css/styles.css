@@ -40,7 +40,7 @@ img { max-width: 100%; display: block; }
 .hamburger { display: none; font-size: 20px; padding: 6px 8px; color: #ffffff; background: transparent; border: none; cursor: pointer; }
 
 /* Footer */
-.site-footer { border-top: 1px solid var(--border); background: #004F2D; margin-top: 40px; color: #ffffff; }
+.site-footer { border-top: 1px solid var(--border); background: #001e3f; margin-top: 40px; color: #ffffff; }
 .footer-inner { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; padding: 24px 0; }
 .footer-inner p { margin: 4px 0; color: #d0d0d0; }
 .footer-inner a { color: #ffffff; text-decoration: none; }
