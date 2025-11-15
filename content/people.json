@@ -19,12 +19,9 @@
       "scholar": "#"
     }
   ],
-  "researchers": [
-    { "name": "YuanGou Lei", "title": "Postdoc", "email": "", "startYear": 2024, "area": "Machine Learning", "photo": "assets/img/avatar.svg" }
-  ],
   "students": [
-    { "name": "YuanGou Lei", "degree": "Bachelor", "startYear": 2022, "area": "Internet of Things", "photo": "assets/img/fyt.jpg" },
-    { "name": "YuanGou Lei", "degree": "Bachelor", "startYear": 2022, "area": "Internet of Things", "photo": "assets/img/zhw.png" }
+    { "name": "Yitao Fang", "degree": "Bachelor", "startYear": 2022, "area": "Internet of Things", "photo": "assets/img/fyt.jpg" },
+    { "name": "Hanwen Zhang", "degree": "Bachelor", "startYear": 2022, "area": "Internet of Things", "photo": "assets/img/zhw.png" }
   ],
   "alumni": [
     { "name": "YuanGou Lei", "year": 2022, "destination": "XX University (PhD)" },
