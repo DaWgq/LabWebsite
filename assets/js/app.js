@@ -76,19 +76,30 @@
       if (data.pi?.length) {
         html.push(`
           <section class="people-section">
-            <h3>导师（PI）</h3>
-            ${data.pi.map(pi => `
+            <h3>PI</h3>
+            ${data.pi.map((pi, index) => {
+              // Check if this is Gunasekaran Nallappan and add link to personal page
+              const isGuna = pi.name && pi.name.toLowerCase().includes('gunasekaran');
+              const nameHtml = isGuna 
+                ? `<a href="guna.html" target="_blank" class="person-name-link"><div class="name">${pi.name}</div></a>`
+                : `<div class="name">${pi.name}</div>`;
+              
+              const cardHtml = `
             <div class="person-card" style="display:grid; grid-template-columns: 180px 1fr; gap:16px; margin-bottom:24px;">
               <img src="${pi.photo}" alt="${pi.name}">
               <div>
-                <div class="name">${pi.name}</div>
+                ${nameHtml}
                 <div class="meta">${pi.title} · ${pi.office || ''}</div>
                 <p>${pi.bio || ''}</p>
                 <p><a href="mailto:${pi.email}">${pi.email}</a> ${pi.scholar ? ` · <a href="${pi.scholar}" target="_blank">Google Scholar</a>` : ''}</p>
               </div>
-            </div>`).join('')}
+            </div>`;
+              return index === 1 ? `<div style="text-align:left; margin:16px 0; font-size:18px; font-weight:600; color:var(--primary);">导师</div>${cardHtml}` : cardHtml;
+            }).join('')
+          }
           </section>`);
       }
+
 
       function renderGrid(title, list) {
         if (!list?.length) return '';
@@ -108,7 +119,70 @@
       }
 
       html.push(renderGrid('研究人员 / 博士后', data.researchers));
-      html.push(renderGrid('在读学生', data.students));
+      
+      // Render students in grouped cards (3 students per large card)
+      if (data.students?.length) {
+        html.push(`
+          <section class="people-section">
+            <h3>在读学生</h3>
+            <div class="student-groups-container">
+        `);
+        
+        // Group students into chunks of 3
+        const students = [...data.students];
+        const groups = [];
+        for (let i = 0; i < students.length; i += 3) {
+          groups.push(students.slice(i, i + 3));
+        }
+        
+        // Ensure we have at least 3 groups (fill with empty placeholders if needed)
+        while (groups.length < 3) {
+          groups.push([]);
+        }
+        
+        // Render each group as a large card
+        groups.forEach((group, groupIndex) => {
+          // Fill group to 3 students with placeholders if needed
+          while (group.length < 3) {
+            group.push(null);
+          }
+          
+          html.push(`
+            <div class="student-group-card">
+              <div class="person-grid">
+                ${group.map((student, index) => {
+                  if (!student) {
+                    // Empty placeholder
+                    return `
+                      <div class="person-card" style="opacity: 0.4; border-style: dashed;">
+                        <div style="width: 100%; aspect-ratio: 1/1; background: var(--bg-light); border-radius: 6px; display: flex; align-items: center; justify-content: center; color: var(--muted); font-size: 14px;">
+                          待添加
+                        </div>
+                        <div class="name" style="margin-top: 12px; color: var(--muted);">-</div>
+                        <div class="meta" style="color: var(--muted);">-</div>
+                        <div class="muted">-</div>
+                      </div>
+                    `;
+                  }
+                  return `
+                    <div class="person-card">
+                      <img src="${student.photo}" alt="${student.name}">
+                      <div class="name">${student.name}</div>
+                      <div class="meta">${student.title || student.degree || ''} · ${student.startYear || ''}</div>
+                      <div class="muted">${student.area || ''}</div>
+                    </div>
+                  `;
+                }).join('')}
+              </div>
+            </div>
+          `);
+        });
+        
+        html.push(`
+            </div>
+          </section>
+        `);
+      }
 
       if (data.alumni?.length) {
         html.push(`
