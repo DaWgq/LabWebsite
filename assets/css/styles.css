@@ -1,11 +1,11 @@
-/* Base */
+ /* Base */
 :root {
   --bg: #ffffff;
   --text: #333333;
   --muted: #666666;
-  --primary: #004F2D;
+  --primary: #001e3f;
   --primary-dark: #003d5b;
-  --accent: #004F2D;
+  --accent: #1a5c88;
   --border: #dcdcdc;
   --bg-light: #f5f7fa;
   --bg-section: #fafbfc;

@@ -74,11 +74,11 @@
       const html = [];
 
       if (data.pi?.length) {
-        const pi = data.pi[0];
         html.push(`
           <section class="people-section">
             <h3>导师（PI）</h3>
-            <div class="person-card" style="display:grid; grid-template-columns: 180px 1fr; gap:16px;">
+            ${data.pi.map(pi => `
+            <div class="person-card" style="display:grid; grid-template-columns: 180px 1fr; gap:16px; margin-bottom:24px;">
               <img src="${pi.photo}" alt="${pi.name}">
               <div>
                 <div class="name">${pi.name}</div>
@@ -86,7 +86,7 @@
                 <p>${pi.bio || ''}</p>
                 <p><a href="mailto:${pi.email}">${pi.email}</a> ${pi.scholar ? ` · <a href="${pi.scholar}" target="_blank">Google Scholar</a>` : ''}</p>
               </div>
-            </div>
+            </div>`).join('')}
           </section>`);
       }
 

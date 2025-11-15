@@ -1,12 +1,21 @@
 {
   "pi": [
     {
-      "name": "YuanGou Lei",
-      "title": "Professor, PI",
+      "name": "Gunasekaran Nallappan",
+      "title": "应用数学专业博士 副教授",
       "email": "pi@xx.edu",
       "office": "Room 501",
-      "photo": "assets/img/avatar.svg",
-      "bio": "研究方向包括人工智能和数据科学，长期关注智能系统的可解释性与可靠性。",
+      "photo": "assets/img/guna.jpg",
+      "bio": "获印度 Thiruvalluvar University 数学博士学位，先后在日本丰田工业大学、芝浦工业大学、韩国群山国立大学等机构从事博士后和访问研究，具有扎实的非线性系统与复杂动力学背景。目前主要研究方向包括人工智能与大数据分析、机器学习与深度学习、自然语言处理、复杂网络与多智能体系统、神经网络与模糊系统控制、风能与可再生能源系统智能控制等。在IEEE Transactions on Cybernetics、Neural Networks、IEEETransactions on Power Electronics 等国际期刊发表多篇高水平论文，主持多项青年人才与科研项目，担任Human-centric Computing andInformation Sciences 等期刊编委及多本 SCI期刊特刊客座编辑",
+      "scholar": "#"
+    },
+    {
+      "name": "张圆圆 Yuanyuan Zhang",
+      "title": "电气工程专业博士 副教授 硕士生导师",
+      "email": "pi@xx.edu",
+      "office": "Room 501",
+      "photo": "assets/img/zyy.jpg",
+      "bio": "先后毕业于河南理工大学电气工程及其自动化专业、广西大学检测技术与自动化装置专业，获工学硕七学位，并在广西大学电气工程专业获得工学博士学位。长期从事自动化与智能控制领域教学与科研工作，主讲《现代控制工程》《电工电子技术》《传感器与测试技术》等课程。研究方向聚焦港口智能化作业与AGV导航控制、风机叶片智能制造与质量监测、新能源冲浪板电控系统与电池健康状态预测等，从工程需求出发开展智能感知、控制算法与系统集成研究。近年来主持及参与多项国家自然科学基金和省部级科研项目，在控制与电气工程等领域发表论文十余篇，获授权发明专利及多项实用新型专利，多次获得自治区及校级教学与科技奖励。",
       "scholar": "#"
     }
   ],
@@ -14,8 +23,8 @@
     { "name": "YuanGou Lei", "title": "Postdoc", "email": "", "startYear": 2024, "area": "Machine Learning", "photo": "assets/img/avatar.svg" }
   ],
   "students": [
-    { "name": "YuanGou Lei", "degree": "PhD", "startYear": 2023, "area": "Robotics", "photo": "assets/img/avatar.svg" },
-    { "name": "YuanGou Lei", "degree": "Master", "startYear": 2024, "area": "Data Science", "photo": "assets/img/avatar.svg" }
+    { "name": "YuanGou Lei", "degree": "Bachelor", "startYear": 2022, "area": "Internet of Things", "photo": "assets/img/fyt.jpg" },
+    { "name": "YuanGou Lei", "degree": "Bachelor", "startYear": 2022, "area": "Internet of Things", "photo": "assets/img/zhw.png" }
   ],
   "alumni": [
     { "name": "YuanGou Lei", "year": 2022, "destination": "XX University (PhD)" },
