@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>张圆圆 Yuanyuan Zhang - 复杂系统与多智能体实验室</title>
+  <meta name="description" content="张圆圆教授个人主页 - 复杂系统与多智能体实验室">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <style>
+    .profile-header {
+      background: linear-gradient(135deg, #e8f1f8, #ffffff);
+      padding: 60px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .profile-header-inner {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 32px;
+      align-items: start;
+    }
+    .profile-photo {
+      width: 200px;
+      height: 200px;
+      border-radius: 8px;
+      object-fit: cover;
+      border: 3px solid var(--primary);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .profile-info h1 {
+      margin: 0 0 12px;
+      font-size: 32px;
+      color: var(--primary);
+    }
+    .profile-title {
+      font-size: 18px;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+    .profile-titles-container {
+      display: grid;
+      grid-template-columns: auto auto;
+      gap: 32px;
+      align-items: start;
+      margin-bottom: 16px;
+    }
+    .profile-titles-column {
+      display: flex;
+      flex-direction: column;
+    }
+    .profile-contact {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 20px;
+    }
+    .profile-contact a {
+      color: var(--primary);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .profile-contact a:hover {
+      color: var(--accent);
+    }
+    .profile-section {
+      padding: 40px 0;
+    }
+    .profile-section h2 {
+      margin: 0 0 24px;
+      font-size: 24px;
+      color: var(--primary);
+      border-left: 4px solid var(--accent);
+      padding-left: 16px;
+    }
+    .profile-section:nth-child(even) {
+      background: var(--bg-section);
+    }
+    .bio-content {
+      line-height: 1.8;
+      font-size: 16px;
+      color: var(--text);
+      text-align: justify;
+    }
+    .research-areas {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 24px;
+    }
+    .research-item {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 20px;
+      transition: all 0.3s ease;
+    }
+    .research-item:hover {
+      box-shadow: 0 4px 12px rgba(0,91,172,0.15);
+      transform: translateY(-2px);
+    }
+    .research-item h3 {
+      margin: 0 0 8px;
+      font-size: 18px;
+      color: var(--primary);
+    }
+    @media (max-width: 768px) {
+      .profile-header-inner {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      .profile-photo {
+        margin: 0 auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="branding">
+        <a href="index.html" class="logo">复杂系统与多智能体实验室</a>
+      </div>
+      <button class="hamburger" aria-label="Toggle navigation">☰</button>
+      <nav class="site-nav" id="site-nav">
+        <a href="index.html">返回首页</a>
+        <a href="index.html#about">实验室简介</a>
+        <a href="index.html#people">团队成员</a>
+        <a href="index.html#research">研究方向</a>
+        <a href="index.html#publications">科研成果</a>
+        <a href="index.html#news">新闻动态</a>
+        <a href="index.html#contact">联系方式</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Profile Header -->
+    <section class="profile-header">
+      <div class="container">
+        <div class="profile-header-inner">
+          <img src="assets/img/zyy.jpg" alt="张圆圆 Yuanyuan Zhang" class="profile-photo">
+          <div class="profile-info">
+            <h1>张圆圆 Yuanyuan Zhang</h1>
+            <div class="profile-titles-container">
+              <div class="profile-titles-column">
+                <div class="profile-title">电气工程专业博士研究生</div>
+                <div class="profile-title">副教授</div>
+                <div class="profile-title">硕士生导师</div>
+              </div>
+            </div>
+            <div class="profile-contact">
+              <a href="mailto:742036673@qq.com">
+                <span>📧</span>
+                <span>742036673@qq.com</span>
+              </a>
+              <a href="mailto:yyzhang@bbgu.com">
+                <span>📧</span>
+                <span>yyzhang@bbgu.com</span>
+              </a>
+              <div style="margin-top: 8px; color: var(--muted);">
+                <span>📍</span>
+                <span>北部湾大学机械与船舶海洋工程学院</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Biography -->
+    <section class="profile-section">
+      <div class="container">
+        <h2>个人简介</h2>
+        <div class="bio-content">
+          <p>
+            张圆圆，副教授，硕士生导师。2006年至2010年本科毕业于河南理工大学，2010年至2013年硕士毕业于广西大学。2013年7月至今在北部湾大学机械与船舶海洋工程学院工作。2019年9月至今，在广西大学攻读电气工程专业博士研究生。
+          </p>
+          <p>
+            长期从事自动化与智能控制领域教学与科研工作，主讲《现代控制工程》、《电工电子技术》以及《传感器与测试技术》等课程。
+          </p>
+          <p>
+            研究方向聚焦于实际工程需求，主要包括港口智能化作业（涉及AI视觉识别、港口IGV小车视觉与激光复合导航控制等技术）、风机叶片智能化制造（研究风机叶片生产过程中的合模胶检测、自动化上料及质量控制等关键技术）、冲浪板电控系统（聚焦于使用深度神经网络FNN根据电池数据准确预测电池健康状态SOH）等领域。
+          </p>
+          <p>
+            主持在研2024年度广西自然科学基金项目联合专项1项，主持完成了广西自治区教育厅中青年项目1项。此外，还参与了多项广西重点研发计划项目、自然科学基金项目及横向课题。以第一作者或通讯作者发表科研论文10余篇，并以第一发明人身份获发明专利1项及实用新型专利3项。获得了多项教学与科研奖项，包括广西高等教育自治区级教学成果奖二等奖（2024年、2019年）和广西科技进步奖二等奖（2017年）等。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Research Areas -->
+    <section class="profile-section">
+      <div class="container">
+        <h2>研究方向</h2>
+        <div class="research-areas">
+          <div class="research-item">
+            <h3>🚢 港口智能化作业</h3>
+            <p class="muted">AI视觉识别、港口IGV小车视觉与激光复合导航控制等技术</p>
+          </div>
+          <div class="research-item">
+            <h3>🌀 风机叶片智能化制造</h3>
+            <p class="muted">风机叶片生产过程中的合模胶检测、自动化上料及质量控制等关键技术</p>
+          </div>
+          <div class="research-item">
+            <h3>🏄 冲浪板电控系统</h3>
+            <p class="muted">使用深度神经网络（FNN）根据电池数据（如SOC、电压、温度等）准确预测电池健康状态（SOH）</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education & Experience -->
+    <section class="profile-section">
+      <div class="container">
+        <h2>教育背景与工作经历</h2>
+        <div class="bio-content">
+          <h3 style="color: var(--primary); margin-top: 24px; margin-bottom: 12px;">教育背景</h3>
+          <ul>
+            <li><strong>2019年9月 - 至今</strong>：广西大学 - 电气工程专业博士研究生（在读）</li>
+            <li><strong>2010年 - 2013年</strong>：广西大学 - 硕士学位</li>
+            <li><strong>2006年 - 2010年</strong>：河南理工大学 - 本科学位</li>
+          </ul>
+          
+          <h3 style="color: var(--primary); margin-top: 32px; margin-bottom: 12px;">工作经历</h3>
+          <ul>
+            <li><strong>2013年7月 - 至今</strong>：北部湾大学机械与船舶海洋工程学院 - 副教授、硕士生导师</li>
+          </ul>
+          
+          <h3 style="color: var(--primary); margin-top: 32px; margin-bottom: 12px;">主讲课程</h3>
+          <ul>
+            <li>《现代控制工程》</li>
+            <li>《电工电子技术》</li>
+            <li>《传感器与测试技术》</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Research Projects -->
+    <section class="profile-section">
+      <div class="container">
+        <h2>科研项目</h2>
+        <div id="projects-content" style="margin-top: 24px;">
+          <div class="pub-list">
+            <div class="pub-item">
+              <div><strong>主持在研</strong>：2024年度广西自然科学基金项目联合专项，1项</div>
+            </div>
+            <div class="pub-item">
+              <div><strong>主持完成</strong>：广西自治区教育厅中青年项目，1项</div>
+            </div>
+            <div class="pub-item">
+              <div><strong>参与</strong>：多项广西重点研发计划项目、自然科学基金项目及横向课题</div>
+            </div>
+          </div>
+          <p style="margin-top: 24px; color: var(--muted); font-style: italic;">课题组经费充足，实验条件完备。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Publications -->
+    <section class="profile-section">
+      <div class="container">
+        <h2>代表性论文</h2>
+        <div id="publications-content" style="margin-top: 24px;">
+          <p class="muted">论文信息加载中...</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Patents & Awards -->
+    <section class="profile-section">
+      <div class="container">
+        <h2>专利与荣誉</h2>
+        <div class="bio-content">
+          <h3 style="color: var(--primary); margin-top: 24px; margin-bottom: 12px;">授权专利</h3>
+          <ul>
+            <li>以第一发明人身份获<strong>发明专利1项</strong></li>
+            <li>以第一发明人身份获<strong>实用新型专利3项</strong></li>
+          </ul>
+          
+          <h3 style="color: var(--primary); margin-top: 32px; margin-bottom: 12px;">获奖情况</h3>
+          <ul>
+            <li><strong>广西高等教育自治区级教学成果奖二等奖</strong>（2024年）</li>
+            <li><strong>广西高等教育自治区级教学成果奖二等奖</strong>（2019年）</li>
+            <li><strong>广西科技进步奖二等奖</strong>（2017年）</li>
+          </ul>
+          
+          <h3 style="color: var(--primary); margin-top: 32px; margin-bottom: 12px;">发表论文</h3>
+          <ul>
+            <li>以第一作者或通讯作者发表科研论文<strong>10余篇</strong></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="profile-section">
+      <div class="container">
+        <h2>联系方式</h2>
+        <div class="bio-content">
+          <p><strong>邮箱：</strong><a href="mailto:742036673@qq.com">742036673@qq.com</a> / <a href="mailto:yyzhang@bbgu.com">yyzhang@bbgu.com</a></p>
+          <p><strong>单位：</strong>北部湾大学机械与船舶海洋工程学院</p>
+          <p><strong>地址：</strong>北部湾大学机械与船舶海洋工程学院复杂系统与多智能体实验室</p>
+          
+          <h3 style="color: var(--primary); margin-top: 32px; margin-bottom: 12px;">招生信息</h3>
+          <p>课题组经费充足，实验条件完备。</p>
+          <p>欢迎<strong>机械、电气、计算机、自动化</strong>等相关学科，具备<strong>数学建模或编程基础</strong>的同学报考。</p>
+          <p>有意向的同学请通过上述邮箱联系。</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>联合工程学院 · 复杂系统与多智能体实验室</strong>
+        <p>Copyright © <span id="copyright-year"></span> 复杂系统与多智能体实验室</p>
+      </div>
+      <div class="footer-contact">
+        <p>地址：北部湾大学联合工程学院复杂系统与多智能体实验室</p>
+        <p>邮箱：pi@xx.edu</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Set copyright year
+    document.getElementById('copyright-year').textContent = new Date().getFullYear();
+
+    // Hamburger menu
+    const hamburger = document.querySelector('.hamburger');
+    const nav = document.getElementById('site-nav');
+    hamburger.addEventListener('click', () => {
+      nav.classList.toggle('open');
+    });
+
+    // Close menu on link click
+    nav.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        nav.classList.remove('open');
+      });
+    });
+
+    // Load publications (filter by professor name)
+    async function loadPublications() {
+      try {
+        const pubs = await fetchJSON('content/publications.json');
+        const professorName = '张圆圆';
+        
+        // Filter publications that might be related to this professor
+        const filteredPubs = pubs.filter(p => 
+          p.authors && (p.authors.includes('张圆圆') || p.authors.toLowerCase().includes('yuanyuan zhang'))
+        );
+
+        if (filteredPubs.length === 0) {
+          // Show all publications if no specific filter matches
+          filteredPubs.push(...pubs.slice(0, 5)); // Show first 5 as example
+        }
+
+        const years = [...new Set(filteredPubs.map(p => p.year))].sort((a, b) => b - a);
+        
+        const items = filteredPubs
+          .sort((a, b) => b.year - a.year)
+          .map(p => `
+            <div class="pub-item">
+              <div>${p.authors}. <strong>${p.title}</strong>. ${p.venue}, ${p.year}.</div>
+              <div class="pub-links">
+                ${p.links?.pdf ? `<a href="${p.links.pdf}" target="_blank">[PDF]</a>` : ''}
+                ${p.links?.doi ? `<a href="${p.links.doi}" target="_blank">[DOI]</a>` : ''}
+                ${p.links?.code ? `<a href="${p.links.code}" target="_blank">[代码]</a>` : ''}
+              </div>
+            </div>
+          `).join('');
+
+        document.getElementById('publications-content').innerHTML = `
+          <ul class="pub-list">${items}</ul>
+        `;
+      } catch (e) {
+        console.error(e);
+        document.getElementById('publications-content').innerHTML = 
+          '<p class="muted">暂无论文信息</p>';
+      }
+    }
+
+    async function fetchJSON(path) {
+      const res = await fetch(path);
+      if (!res.ok) throw new Error('Failed to load ' + path);
+      return res.json();
+    }
+
+    // Load publications on page load
+    loadPublications();
+  </script>
+</body>
+</html>

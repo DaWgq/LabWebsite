@@ -78,11 +78,18 @@
           <section class="people-section">
             <div style="text-align:left; margin:16px 0; font-size:18px; font-weight:600; color:var(--primary);">PI</div>
             ${data.pi.map((pi, index) => {
-              // Check if this is Gunasekaran Nallappan and add link to personal page
+              // Check if this is Gunasekaran Nallappan or Zhang Yuanyuan and add link to personal page
               const isGuna = pi.name && pi.name.toLowerCase().includes('gunasekaran');
-              const nameHtml = isGuna 
-                ? `<a href="guna.html" target="_blank" class="person-name-link"><div class="name">${pi.name}</div></a>`
-                : `<div class="name">${pi.name}</div>`;
+              const isZyy = pi.name && (pi.name.includes('张圆圆') || pi.name.toLowerCase().includes('yuanyuan'));
+              
+              let nameHtml;
+              if (isGuna) {
+                nameHtml = `<a href="guna.html" target="_blank" class="person-name-link"><div class="name">${pi.name}</div></a>`;
+              } else if (isZyy) {
+                nameHtml = `<a href="zyy.html" target="_blank" class="person-name-link"><div class="name">${pi.name}</div></a>`;
+              } else {
+                nameHtml = `<div class="name">${pi.name}</div>`;
+              }
               
               const cardHtml = `
             <div class="person-card" style="display:grid; grid-template-columns: 180px 1fr; gap:16px; margin-bottom:24px;">
