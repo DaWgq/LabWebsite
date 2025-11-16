@@ -89,7 +89,13 @@ img { max-width: 100%; display: block; }
 
 /* People */
 .people-section { margin: 28px 0; }
-.people-section h3 { color: var(--primary); font-size: 20px; margin-bottom: 16px; }
+.people-section h3 { 
+  color: var(--primary); 
+  font-size: 28px; 
+  margin: 0 0 24px; 
+  border-left: 4px solid var(--accent); 
+  padding-left: 16px; 
+}
 .person-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
 .person-card { border: 1px solid var(--border); border-radius: 8px; padding: 16px; background: #fff; transition: all 0.3s ease; }
 .person-card:hover { box-shadow: 0 4px 12px rgba(0,91,172,0.15); transform: translateY(-2px); }

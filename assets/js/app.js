@@ -76,7 +76,7 @@
       if (data.pi?.length) {
         html.push(`
           <section class="people-section">
-            <h3>PI</h3>
+            <div style="text-align:left; margin:16px 0; font-size:18px; font-weight:600; color:var(--primary);">PI</div>
             ${data.pi.map((pi, index) => {
               // Check if this is Gunasekaran Nallappan and add link to personal page
               const isGuna = pi.name && pi.name.toLowerCase().includes('gunasekaran');
@@ -89,7 +89,18 @@
               <img src="${pi.photo}" alt="${pi.name}">
               <div>
                 ${nameHtml}
-                <div class="meta">${pi.title} · ${pi.office || ''}</div>
+                ${isGuna ? `
+                <div style="display:grid; grid-template-columns: auto auto; gap:24px; align-items:start; margin-bottom:12px;">
+                  <div style="display:flex; flex-direction:column;">
+                    <div class="meta" style="margin-bottom:4px;">应用数学博士</div>
+                    <div class="meta" style="margin-bottom:4px;">副教授</div>
+                  </div>
+                  <div style="display:flex; flex-direction:column;">
+                    <div class="meta" style="margin-bottom:4px;">IEEE成员/创始董事</div>
+                    <div class="meta" style="margin-bottom:4px;">《富兰克林研究所期刊》副主编</div>
+                  </div>
+                </div>
+                ` : `<div class="meta">${pi.title} · ${pi.office || ''}</div>`}
                 <p>${pi.bio || ''}</p>
                 <p><a href="mailto:${pi.email}">${pi.email}</a> ${pi.scholar ? ` · <a href="${pi.scholar}" target="_blank">Google Scholar</a>` : ''}</p>
               </div>
@@ -120,63 +131,83 @@
 
       html.push(renderGrid('研究人员 / 博士后', data.researchers));
       
-      // Render students in grouped cards (3 students per large card)
+      // Render students in A group with horizontal layout (3 per row)
       if (data.students?.length) {
         html.push(`
           <section class="people-section">
-            <h3>在读学生</h3>
-            <div class="student-groups-container">
+            <h3>团队成员</h3>
+            <div style="text-align:left; margin:16px 0; font-size:18px; font-weight:600; color:var(--primary);">A组</div>
+            <div class="person-grid" style="grid-template-columns: repeat(3, 1fr); gap: 20px;">
         `);
         
-        // Group students into chunks of 3
-        const students = [...data.students];
-        const groups = [];
-        for (let i = 0; i < students.length; i += 3) {
-          groups.push(students.slice(i, i + 3));
-        }
-        
-        // Ensure we have at least 3 groups (fill with empty placeholders if needed)
-        while (groups.length < 3) {
-          groups.push([]);
-        }
-        
-        // Render each group as a large card
-        groups.forEach((group, groupIndex) => {
-          // Fill group to 3 students with placeholders if needed
-          while (group.length < 3) {
-            group.push(null);
-          }
-          
+        // Render existing students
+        data.students.forEach(student => {
           html.push(`
-            <div class="student-group-card">
-              <div class="person-grid">
-                ${group.map((student, index) => {
-                  if (!student) {
-                    // Empty placeholder
-                    return `
-                      <div class="person-card" style="opacity: 0.4; border-style: dashed;">
-                        <div style="width: 100%; aspect-ratio: 1/1; background: var(--bg-light); border-radius: 6px; display: flex; align-items: center; justify-content: center; color: var(--muted); font-size: 14px;">
-                          待添加
-                        </div>
-                        <div class="name" style="margin-top: 12px; color: var(--muted);">-</div>
-                        <div class="meta" style="color: var(--muted);">-</div>
-                        <div class="muted">-</div>
-                      </div>
-                    `;
-                  }
-                  return `
-                    <div class="person-card">
-                      <img src="${student.photo}" alt="${student.name}">
-                      <div class="name">${student.name}</div>
-                      <div class="meta">${student.title || student.degree || ''} · ${student.startYear || ''}</div>
-                      <div class="muted">${student.area || ''}</div>
-                    </div>
-                  `;
-                }).join('')}
+              <div class="person-card">
+                <img src="${student.photo}" alt="${student.name}">
+                <div class="name">${student.name}</div>
+                <div class="meta">${student.degree || ''} · ${student.startYear || ''}</div>
+                <div class="muted">${student.area || ''}</div>
               </div>
-            </div>
           `);
         });
+        
+        // Add placeholder for the third person in A组
+        const placeholdersNeeded = 3 - (data.students.length % 3);
+        if (placeholdersNeeded < 3) {
+          for (let i = 0; i < placeholdersNeeded; i++) {
+            html.push(`
+              <div class="person-card" style="opacity: 0.6; border-style: dashed;">
+                <img src="assets/img/avatar.svg" alt="待添加">
+                <div class="name" style="color: var(--muted);">待添加</div>
+                <div class="meta" style="color: var(--muted);">-</div>
+                <div class="muted">-</div>
+              </div>
+            `);
+          }
+        }
+        
+        html.push(`
+            </div>
+        `);
+        
+        // Add B组 with 3 placeholders
+        html.push(`
+            <div style="text-align:left; margin:16px 0; font-size:18px; font-weight:600; color:var(--primary);">B组</div>
+            <div class="person-grid" style="grid-template-columns: repeat(3, 1fr); gap: 20px;">
+        `);
+        
+        for (let i = 0; i < 3; i++) {
+          html.push(`
+              <div class="person-card" style="opacity: 0.6; border-style: dashed;">
+                <img src="assets/img/avatar.svg" alt="待添加">
+                <div class="name" style="color: var(--muted);">待添加</div>
+                <div class="meta" style="color: var(--muted);">-</div>
+                <div class="muted">-</div>
+              </div>
+          `);
+        }
+        
+        html.push(`
+            </div>
+        `);
+        
+        // Add C组 with 3 placeholders
+        html.push(`
+            <div style="text-align:left; margin:16px 0; font-size:18px; font-weight:600; color:var(--primary);">C组</div>
+            <div class="person-grid" style="grid-template-columns: repeat(3, 1fr); gap: 20px;">
+        `);
+        
+        for (let i = 0; i < 3; i++) {
+          html.push(`
+              <div class="person-card" style="opacity: 0.6; border-style: dashed;">
+                <img src="assets/img/avatar.svg" alt="待添加">
+                <div class="name" style="color: var(--muted);">待添加</div>
+                <div class="meta" style="color: var(--muted);">-</div>
+                <div class="muted">-</div>
+              </div>
+          `);
+        }
         
         html.push(`
             </div>

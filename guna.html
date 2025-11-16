@@ -34,7 +34,18 @@
     .profile-title {
       font-size: 18px;
       color: var(--muted);
+      margin-bottom: 8px;
+    }
+    .profile-titles-container {
+      display: grid;
+      grid-template-columns: auto auto;
+      gap: 32px;
+      align-items: start;
       margin-bottom: 16px;
+    }
+    .profile-titles-column {
+      display: flex;
+      flex-direction: column;
     }
     .profile-contact {
       display: flex;
@@ -131,7 +142,17 @@
           <img src="assets/img/guna.jpg" alt="Gunasekaran Nallappan" class="profile-photo">
           <div class="profile-info">
             <h1>Gunasekaran Nallappan</h1>
-            <div class="profile-title">应用数学专业博士 · 副教授</div>
+            <div class="profile-titles-container">
+              <div class="profile-titles-column">
+                
+                <div class="profile-title">应用数学博士</div>
+                <div class="profile-title">副教授</div>
+              </div>
+              <div class="profile-titles-column">
+                <div class="profile-title">IEEE成员/创始董事</div>
+                <div class="profile-title">《富兰克林研究所期刊》副主编</div>
+              </div>
+            </div>
             <div class="profile-contact">
               <a href="mailto:pi@xx.edu">
                 <span>📧</span>
