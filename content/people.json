@@ -21,6 +21,7 @@
   ],
   "students": [
     { "name": "Yitao Fang", "degree": "Bachelor", "startYear": 2022, "area": "Internet of Things", "photo": "assets/img/fyt.jpg" },
+    { "name": "Dongkang Zhang", "degree": "Bachelor", "startYear": 2022, "area": "Internet of Things", "photo": "assets/img/zdk.jpg" },
     { "name": "Hanwen Zhang", "degree": "Bachelor", "startYear": 2022, "area": "Internet of Things", "photo": "assets/img/zhw.png" }
   ],
   "alumni": [
