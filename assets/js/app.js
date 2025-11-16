@@ -76,7 +76,7 @@
       if (data.pi?.length) {
         html.push(`
           <section class="people-section">
-            <div style="text-align:left; margin:16px 0; font-size:18px; font-weight:600; color:var(--primary);">PI</div>
+            <div style="text-align:left; margin:16px 0; font-size:18px; font-weight:600; color:var(--primary);">PI/Founding Director</div>
             ${data.pi.map((pi, index) => {
               // Check if this is Gunasekaran Nallappan or Zhang Yuanyuan and add link to personal page
               const isGuna = pi.name && pi.name.toLowerCase().includes('gunasekaran');
@@ -103,7 +103,7 @@
                     <div class="meta" style="margin-bottom:4px;">副教授</div>
                   </div>
                   <div style="display:flex; flex-direction:column;">
-                    <div class="meta" style="margin-bottom:4px;">IEEE成员/创始董事</div>
+                    <div class="meta" style="margin-bottom:4px;">IEEE成员</div>
                     <div class="meta" style="margin-bottom:4px;">《富兰克林研究所期刊》副主编</div>
                   </div>
                 </div>
