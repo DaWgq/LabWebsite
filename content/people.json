@@ -24,6 +24,16 @@
     { "name": "Dongkang Zhang", "degree": "Bachelor", "startYear": 2022, "area": "Internet of Things", "photo": "assets/img/zdk.jpg" },
     { "name": "Hanwen Zhang", "degree": "Bachelor", "startYear": 2022, "area": "Internet of Things", "photo": "assets/img/zhw.png" }
   ],
+  "autonomousDriving": [
+    { "name": "Chengyu Huang", "degree": "Bachelor", "startYear": 2024, "area": "Mechanics and Automation", "photo": "assets/img/hcy.jpg" },
+    { "name": "Xiaoxi Yi", "degree": "Bachelor", "startYear": 2023, "area": "Vehicle Engineering", "photo": "assets/img/yxx.jpg" },
+    { "name": "Zecheng Yuan", "degree": "Bachelor", "startYear": 2024, "area": "Mechanics and Automation", "photo": "assets/img/yzc.jpg" },
+    { "name": "Xiakang Le", "degree": "Bachelor", "startYear": 2024, "area": "Vehicle Engineering", "photo": "assets/img/xkl.jpg" }
+  ],
+  "automationSimulation": [
+    { "name": "Shengdong Tian", "degree": "Bachelor", "startYear": 2024, "area": "Vehicle Engineering", "photo": "assets/img/tsd.jpg" },
+    { "name": "Xiaoqing Liu", "degree": "Bachelor", "startYear": 2024, "area": "Internet of Things", "photo": "assets/img/lxq.jpg" }
+  ],
   "alumni": [
     { "name": "YuanGou Lei", "year": 2022, "destination": "XX University (PhD)" },
     { "name": "YuanGou Lei", "year": 2021, "destination": "ABC Corp (Engineer)" }

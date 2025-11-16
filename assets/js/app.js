@@ -143,8 +143,8 @@
         html.push(`
           <section class="people-section">
             <h3>团队成员</h3>
-            <div style="text-align:left; margin:16px 0; font-size:18px; font-weight:600; color:var(--primary);">A组</div>
-            <div class="person-grid" style="grid-template-columns: repeat(3, 1fr); gap: 20px;">
+            <div style="text-align:left; margin:16px 0; font-size:18px; font-weight:600; color:var(--primary);">人工智能与复杂计算课题组</div>
+            <div class="person-grid" style="grid-template-columns: repeat(4, 1fr); gap: 20px;">
         `);
         
         // Render existing students
@@ -159,9 +159,9 @@
           `);
         });
         
-        // Add placeholder for the third person in A组
-        const placeholdersNeeded = 3 - (data.students.length % 3);
-        if (placeholdersNeeded < 3) {
+        // Add placeholder to complete the row of 4
+        const placeholdersNeeded = 4 - (data.students.length % 4);
+        if (placeholdersNeeded < 4) {
           for (let i = 0; i < placeholdersNeeded; i++) {
             html.push(`
               <div class="person-card" style="opacity: 0.6; border-style: dashed;">
@@ -178,42 +178,102 @@
             </div>
         `);
         
-        // Add B组 with 3 placeholders
+        // Add autonomous driving group
         html.push(`
-            <div style="text-align:left; margin:16px 0; font-size:18px; font-weight:600; color:var(--primary);">B组</div>
-            <div class="person-grid" style="grid-template-columns: repeat(3, 1fr); gap: 20px;">
+            <div style="text-align:left; margin:16px 0; font-size:18px; font-weight:600; color:var(--primary);">自动驾驶与智能控制课题组</div>
+            <div class="person-grid" style="grid-template-columns: repeat(4, 1fr); gap: 20px;">
         `);
         
-        for (let i = 0; i < 3; i++) {
-          html.push(`
+        // Render autonomous driving group members
+        if (data.autonomousDriving?.length) {
+          data.autonomousDriving.forEach(member => {
+            html.push(`
+              <div class="person-card">
+                <img src="${member.photo}" alt="${member.name}">
+                <div class="name">${member.name}</div>
+                <div class="meta">${member.degree || ''} · ${member.startYear || ''}</div>
+                <div class="muted">${member.area || ''}</div>
+              </div>
+            `);
+          });
+          
+          // Add placeholders if needed to complete the row
+          const placeholdersNeeded = 4 - (data.autonomousDriving.length % 4);
+          if (placeholdersNeeded < 4) {
+            for (let i = 0; i < placeholdersNeeded; i++) {
+              html.push(`
+                <div class="person-card" style="opacity: 0.6; border-style: dashed;">
+                  <img src="assets/img/avatar.svg" alt="待添加">
+                  <div class="name" style="color: var(--muted);">待添加</div>
+                  <div class="meta" style="color: var(--muted);">-</div>
+                  <div class="muted">-</div>
+                </div>
+              `);
+            }
+          }
+        } else {
+          // If no autonomous driving members, show 4 placeholders
+          for (let i = 0; i < 4; i++) {
+            html.push(`
               <div class="person-card" style="opacity: 0.6; border-style: dashed;">
                 <img src="assets/img/avatar.svg" alt="待添加">
                 <div class="name" style="color: var(--muted);">待添加</div>
                 <div class="meta" style="color: var(--muted);">-</div>
                 <div class="muted">-</div>
               </div>
-          `);
+            `);
+          }
         }
         
         html.push(`
             </div>
         `);
         
-        // Add C组 with 3 placeholders
+        // Add automation simulation group
         html.push(`
-            <div style="text-align:left; margin:16px 0; font-size:18px; font-weight:600; color:var(--primary);">C组</div>
-            <div class="person-grid" style="grid-template-columns: repeat(3, 1fr); gap: 20px;">
+            <div style="text-align:left; margin:16px 0; font-size:18px; font-weight:600; color:var(--primary);">自动化仿真与复杂电路课题组</div>
+            <div class="person-grid" style="grid-template-columns: repeat(4, 1fr); gap: 20px;">
         `);
         
-        for (let i = 0; i < 3; i++) {
-          html.push(`
+        // Render automation simulation group members
+        if (data.automationSimulation?.length) {
+          data.automationSimulation.forEach(member => {
+            html.push(`
+              <div class="person-card">
+                <img src="${member.photo}" alt="${member.name}">
+                <div class="name">${member.name}</div>
+                <div class="meta">${member.degree || ''} · ${member.startYear || ''}</div>
+                <div class="muted">${member.area || ''}</div>
+              </div>
+            `);
+          });
+          
+          // Add placeholders if needed to complete the row
+          const placeholdersNeeded = 4 - (data.automationSimulation.length % 4);
+          if (placeholdersNeeded < 4) {
+            for (let i = 0; i < placeholdersNeeded; i++) {
+              html.push(`
+                <div class="person-card" style="opacity: 0.6; border-style: dashed;">
+                  <img src="assets/img/avatar.svg" alt="待添加">
+                  <div class="name" style="color: var(--muted);">待添加</div>
+                  <div class="meta" style="color: var(--muted);">-</div>
+                  <div class="muted">-</div>
+                </div>
+              `);
+            }
+          }
+        } else {
+          // If no automation simulation members, show 4 placeholders
+          for (let i = 0; i < 4; i++) {
+            html.push(`
               <div class="person-card" style="opacity: 0.6; border-style: dashed;">
                 <img src="assets/img/avatar.svg" alt="待添加">
                 <div class="name" style="color: var(--muted);">待添加</div>
                 <div class="meta" style="color: var(--muted);">-</div>
                 <div class="muted">-</div>
               </div>
-          `);
+            `);
+          }
         }
         
         html.push(`
