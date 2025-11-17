@@ -109,7 +109,17 @@
                 </div>
                 ` : `<div class="meta">${pi.title} · ${pi.office || ''}</div>`}
                 <p>${pi.bio || ''}</p>
-                <p><a href="mailto:${pi.email}">${pi.email}</a> ${pi.scholar ? ` · <a href="${pi.scholar}" target="_blank">Google Scholar</a>` : ''}</p>
+                ${isGuna ? `
+                <p>
+                  <a href="${pi.email}" target="_blank">ORCID</a><br>
+                  <a href="${pi.scholar}" target="_blank">Google Scholar</a>
+                </p>
+                ` : isZyy ? `
+                <p>
+                  <a href="mailto:${pi.email}">${pi.email}</a><br>
+                  <a href="${pi.scholar}" target="_blank">BBGU</a>
+                </p>
+                ` : `<p><a href="mailto:${pi.email}">${pi.email}</a> ${pi.scholar && pi.scholar !== '#' ? ` · <a href="${pi.scholar}" target="_blank">Google Scholar</a>` : ''}</p>`}
               </div>
             </div>`;
               return index === 1 ? `<div style="text-align:left; margin:16px 0; font-size:18px; font-weight:600; color:var(--primary);">导师</div>${cardHtml}` : cardHtml;
