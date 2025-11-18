@@ -159,30 +159,25 @@
         
         // Render existing students
         data.students.forEach(student => {
+          // Check if this is Yitao Fang and add link to personal page
+          const isFyt = student.name && (student.name.toLowerCase().includes('yitao') || student.name.toLowerCase().includes('fang'));
+          
+          let nameHtml;
+          if (isFyt) {
+            nameHtml = `<a href="fyt.html" target="_blank" class="person-name-link"><div class="name">${student.name}</div></a>`;
+          } else {
+            nameHtml = `<div class="name">${student.name}</div>`;
+          }
+          
           html.push(`
               <div class="person-card">
                 <img src="${student.photo}" alt="${student.name}">
-                <div class="name">${student.name}</div>
+                ${nameHtml}
                 <div class="meta">${student.degree || ''} · ${student.startYear || ''}</div>
                 <div class="muted">${student.area || ''}</div>
               </div>
           `);
         });
-        
-        // Add placeholder to complete the row of 4
-        const placeholdersNeeded = 4 - (data.students.length % 4);
-        if (placeholdersNeeded < 4) {
-          for (let i = 0; i < placeholdersNeeded; i++) {
-            html.push(`
-              <div class="person-card" style="opacity: 0.6; border-style: dashed;">
-                <img src="assets/img/avatar.svg" alt="待添加">
-                <div class="name" style="color: var(--muted);">待添加</div>
-                <div class="meta" style="color: var(--muted);">-</div>
-                <div class="muted">-</div>
-              </div>
-            `);
-          }
-        }
         
         html.push(`
             </div>
@@ -206,33 +201,6 @@
               </div>
             `);
           });
-          
-          // Add placeholders if needed to complete the row
-          const placeholdersNeeded = 4 - (data.autonomousDriving.length % 4);
-          if (placeholdersNeeded < 4) {
-            for (let i = 0; i < placeholdersNeeded; i++) {
-              html.push(`
-                <div class="person-card" style="opacity: 0.6; border-style: dashed;">
-                  <img src="assets/img/avatar.svg" alt="待添加">
-                  <div class="name" style="color: var(--muted);">待添加</div>
-                  <div class="meta" style="color: var(--muted);">-</div>
-                  <div class="muted">-</div>
-                </div>
-              `);
-            }
-          }
-        } else {
-          // If no autonomous driving members, show 4 placeholders
-          for (let i = 0; i < 4; i++) {
-            html.push(`
-              <div class="person-card" style="opacity: 0.6; border-style: dashed;">
-                <img src="assets/img/avatar.svg" alt="待添加">
-                <div class="name" style="color: var(--muted);">待添加</div>
-                <div class="meta" style="color: var(--muted);">-</div>
-                <div class="muted">-</div>
-              </div>
-            `);
-          }
         }
         
         html.push(`
@@ -257,33 +225,6 @@
               </div>
             `);
           });
-          
-          // Add placeholders if needed to complete the row
-          const placeholdersNeeded = 4 - (data.automationSimulation.length % 4);
-          if (placeholdersNeeded < 4) {
-            for (let i = 0; i < placeholdersNeeded; i++) {
-              html.push(`
-                <div class="person-card" style="opacity: 0.6; border-style: dashed;">
-                  <img src="assets/img/avatar.svg" alt="待添加">
-                  <div class="name" style="color: var(--muted);">待添加</div>
-                  <div class="meta" style="color: var(--muted);">-</div>
-                  <div class="muted">-</div>
-                </div>
-              `);
-            }
-          }
-        } else {
-          // If no automation simulation members, show 4 placeholders
-          for (let i = 0; i < 4; i++) {
-            html.push(`
-              <div class="person-card" style="opacity: 0.6; border-style: dashed;">
-                <img src="assets/img/avatar.svg" alt="待添加">
-                <div class="name" style="color: var(--muted);">待添加</div>
-                <div class="meta" style="color: var(--muted);">-</div>
-                <div class="muted">-</div>
-              </div>
-            `);
-          }
         }
         
         html.push(`
