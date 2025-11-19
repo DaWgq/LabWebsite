@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Gunasekaran Nallappan - 复杂系统与多智能体实验室</title>
   <meta name="description" content="Gunasekaran Nallappan教授个人主页 - 复杂系统与多智能体实验室">
-  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
   <style>
     .profile-header {
       background: linear-gradient(135deg, #e8f1f8, #ffffff);
@@ -119,17 +119,17 @@
   <header class="site-header">
     <div class="container header-inner">
       <div class="branding">
-        <a href="index.html" class="logo">复杂系统与多智能体实验室</a>
+        <a href="../index.html" class="logo">复杂系统与多智能体实验室</a>
       </div>
       <button class="hamburger" aria-label="Toggle navigation">☰</button>
       <nav class="site-nav" id="site-nav">
-        <a href="index.html">返回首页</a>
-        <a href="index.html#about">实验室简介</a>
-        <a href="index.html#people">团队成员</a>
-        <a href="index.html#research">研究方向</a>
-        <a href="index.html#publications">科研成果</a>
-        <a href="index.html#news">新闻动态</a>
-        <a href="index.html#contact">联系方式</a>
+        <a href="../index.html">返回首页</a>
+        <a href="../index.html#about">实验室简介</a>
+        <a href="../index.html#people">团队成员</a>
+        <a href="../index.html#research">研究方向</a>
+        <a href="../index.html#publications">科研成果</a>
+        <a href="../index.html#news">新闻动态</a>
+        <a href="../index.html#contact">联系方式</a>
       </nav>
     </div>
   </header>
@@ -139,7 +139,7 @@
     <section class="profile-header">
       <div class="container">
         <div class="profile-header-inner">
-          <img src="assets/img/guna.jpg" alt="Gunasekaran Nallappan" class="profile-photo">
+          <img src="../assets/img/guna.jpg" alt="Gunasekaran Nallappan" class="profile-photo">
           <div class="profile-info">
             <h1>Nallappan Gunasekaran</h1>
             <div class="profile-titles-container">
@@ -152,16 +152,14 @@
               </div>
             </div>
             <div class="profile-contact">
-              <a href="mailto:gunasmaths@bbgu.edu.cn">
-                <span>📧</span>
-                <span>gunasmaths@bbgu.edu.cn</span>
+              <a href="https://orcid.org/0000-0003-0375-7917" target="_blank">
+                <span>ORCID</span>
               </a>
-              <a href="mailto:gunasmaths@gmail.com">
-                <span>📧</span>
-                <span>gunasmaths@gmail.com</span>
+              <a href="https://scholar.google.com/citations?user=4MhMsUkAAAAJ&hl=en" target="_blank">
+                <span>Google Scholar</span>
               </a>
               <div style="margin-top: 8px; color: var(--muted);">
-                <span>📍</span>
+                <span></span>
                 <span>北部湾大学东密歇根联合工程学院</span>
               </div>
             </div>
@@ -194,27 +192,27 @@
         <h2>研究方向</h2>
         <div class="research-areas">
           <div class="research-item">
-            <h3>🤖 人工智能与大数据分析</h3>
+            <h3>人工智能与大数据分析</h3>
             <p class="muted">数据挖掘、数据科学与智能分析方法</p>
           </div>
           <div class="research-item">
-            <h3>🧠 机器学习与深度学习</h3>
+            <h3>机器学习与深度学习</h3>
             <p class="muted">图神经网络、大型语言模型与算法优化</p>
           </div>
           <div class="research-item">
-            <h3>💬 自然语言处理（NLP）</h3>
+            <h3>自然语言处理（NLP）</h3>
             <p class="muted">文本理解与语言模型研究</p>
           </div>
           <div class="research-item">
-            <h3>🔬 量子机器学习</h3>
+            <h3>量子机器学习</h3>
             <p class="muted">量子计算与动力系统的交叉研究，量子算法在控制理论与混沌理论中的应用</p>
           </div>
           <div class="research-item">
-            <h3>🌐 多智能体系统与T-S模糊系统</h3>
+            <h3>多智能体系统与T-S模糊系统</h3>
             <p class="muted">群体智能、协同控制与复杂动力系统</p>
           </div>
           <div class="research-item">
-            <h3>🏥 AI应用领域</h3>
+            <h3>AI应用领域</h3>
             <p class="muted">健康、生物信息学、生物数学和计算机视觉中的AI应用</p>
           </div>
         </div>
@@ -338,7 +336,7 @@
     // Load publications (filter by professor name)
     async function loadPublications() {
       try {
-        const pubs = await fetchJSON('content/publications.json');
+        const pubs = await fetchJSON('../content/publications.json');
         const professorName = 'Gunasekaran Nallappan';
         
         // Filter publications that might be related to this professor

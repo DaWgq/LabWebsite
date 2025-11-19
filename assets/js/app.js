@@ -84,9 +84,9 @@
               
               let nameHtml;
               if (isGuna) {
-                nameHtml = `<a href="guna.html" target="_blank" class="person-name-link"><div class="name">${pi.name}</div></a>`;
+                nameHtml = `<a href="pages/guna.html" target="_blank" class="person-name-link"><div class="name">${pi.name}</div></a>`;
               } else if (isZyy) {
-                nameHtml = `<a href="zyy.html" target="_blank" class="person-name-link"><div class="name">${pi.name}</div></a>`;
+                nameHtml = `<a href="pages/zyy.html" target="_blank" class="person-name-link"><div class="name">${pi.name}</div></a>`;
               } else {
                 nameHtml = `<div class="name">${pi.name}</div>`;
               }
@@ -159,12 +159,15 @@
         
         // Render existing students
         data.students.forEach(student => {
-          // Check if this is Yitao Fang and add link to personal page
+          // Check if this is Yitao Fang or Hanwen Zhang and add link to personal page
           const isFyt = student.name && (student.name.toLowerCase().includes('yitao') || student.name.toLowerCase().includes('fang'));
+          const isZhw = student.name && (student.name.toLowerCase().includes('hanwen') || student.name.toLowerCase().includes('zhang'));
           
           let nameHtml;
           if (isFyt) {
-            nameHtml = `<a href="fyt.html" target="_blank" class="person-name-link"><div class="name">${student.name}</div></a>`;
+            nameHtml = `<a href="pages/fyt.html" target="_blank" class="person-name-link"><div class="name">${student.name}</div></a>`;
+          } else if (isZhw) {
+            nameHtml = `<a href="pages/zhw.html" target="_blank" class="person-name-link"><div class="name">${student.name}</div></a>`;
           } else {
             nameHtml = `<div class="name">${student.name}</div>`;
           }
@@ -236,7 +239,7 @@
       if (data.alumni?.length) {
         html.push(`
           <section class="people-section">
-            <h3>已毕业学生</h3>
+            <h3>毕业学生去向</h3>
             <ul class="news-list">
               ${data.alumni.map(a => `<li><span>${a.name}</span><span class="news-date">${a.year}</span><span class="muted">${a.destination || ''}</span></li>`).join('')}
             </ul>
