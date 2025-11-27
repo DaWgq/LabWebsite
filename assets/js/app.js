@@ -198,10 +198,20 @@
         // Render autonomous driving group members
         if (data.autonomousDriving?.length) {
           data.autonomousDriving.forEach(member => {
+            // Check if this is Kangle Xia and add link to personal page
+            const isXkl = member.name && member.name.toLowerCase().includes('kangle');
+            
+            let nameHtml;
+            if (isXkl) {
+              nameHtml = `<a href="pages/xkl.html" target="_blank" class="person-name-link"><div class="name">${member.name}</div></a>`;
+            } else {
+              nameHtml = `<div class="name">${member.name}</div>`;
+            }
+            
             html.push(`
               <div class="person-card">
                 <img src="${member.photo}" alt="${member.name}">
-                <div class="name">${member.name}</div>
+                ${nameHtml}
                 <div class="meta">${member.degree || ''} · ${member.startYear || ''}</div>
                 <div class="muted">${member.area || ''}</div>
               </div>
@@ -222,10 +232,20 @@
         // Render automation simulation group members
         if (data.automationSimulation?.length) {
           data.automationSimulation.forEach(member => {
+            // Check if this is Xiaoqing Liu and add link to personal page
+            const isLxq = member.name && member.name.toLowerCase().includes('xiaoqing');
+            
+            let nameHtml;
+            if (isLxq) {
+              nameHtml = `<a href="pages/lxq.html" target="_blank" class="person-name-link"><div class="name">${member.name}</div></a>`;
+            } else {
+              nameHtml = `<div class="name">${member.name}</div>`;
+            }
+            
             html.push(`
               <div class="person-card">
                 <img src="${member.photo}" alt="${member.name}">
-                <div class="name">${member.name}</div>
+                ${nameHtml}
                 <div class="meta">${member.degree || ''} · ${member.startYear || ''}</div>
                 <div class="muted">${member.area || ''}</div>
               </div>
