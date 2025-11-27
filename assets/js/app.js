@@ -159,15 +159,18 @@
         
         // Render existing students
         data.students.forEach(student => {
-          // Check if this is Yitao Fang or Hanwen Zhang and add link to personal page
-          const isFyt = student.name && (student.name.toLowerCase().includes('yitao') || student.name.toLowerCase().includes('fang'));
-          const isZhw = student.name && (student.name.toLowerCase().includes('hanwen') || student.name.toLowerCase().includes('zhang'));
+          // Check if this is Yitao Fang, Hanwen Zhang or Dongkang Zhang and add link to personal page
+          const isFyt = student.name && student.name.toLowerCase().includes('yitao');
+          const isZhw = student.name && student.name.toLowerCase().includes('hanwen');
+          const isZdk = student.name && student.name.toLowerCase().includes('dongkang');
           
           let nameHtml;
           if (isFyt) {
             nameHtml = `<a href="pages/fyt.html" target="_blank" class="person-name-link"><div class="name">${student.name}</div></a>`;
           } else if (isZhw) {
             nameHtml = `<a href="pages/zhw.html" target="_blank" class="person-name-link"><div class="name">${student.name}</div></a>`;
+          } else if (isZdk) {
+            nameHtml = `<a href="https://dawgq.github.io/My-Website-E/" target="_blank" class="person-name-link"><div class="name">${student.name}</div></a>`;
           } else {
             nameHtml = `<div class="name">${student.name}</div>`;
           }
